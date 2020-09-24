@@ -3,10 +3,587 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+
+	*{
+	  margin: 0px;
+	}
+	
+	body{
+	  background-color: #f8f9fa;
+
+	}
+
+	.gnbWrapper, .gnbWrapper a, .gnbWrapper abbr, .gnbWrapper acronym, .gnbWrapper address, .gnbWrapper applet, .gnbWrapper article, .gnbWrapper aside, .gnbWrapper audio, .gnbWrapper b, .gnbWrapper big, .gnbWrapper blockquote, .gnbWrapper body, .gnbWrapper button, .gnbWrapper canvas, .gnbWrapper caption, .gnbWrapper center, .gnbWrapper cite, .gnbWrapper code, .gnbWrapper dd, .gnbWrapper del, .gnbWrapper details, .gnbWrapper dfn, .gnbWrapper div, .gnbWrapper dl, .gnbWrapper dt, .gnbWrapper em, .gnbWrapper embed, .gnbWrapper fieldset, .gnbWrapper figcaption, .gnbWrapper figure, .gnbWrapper footer, .gnbWrapper form, .gnbWrapper h1, .gnbWrapper h2, .gnbWrapper h3, .gnbWrapper h4, .gnbWrapper h5, .gnbWrapper h6, .gnbWrapper header, .gnbWrapper hgroup, .gnbWrapper html, .gnbWrapper i, .gnbWrapper iframe, .gnbWrapper img, .gnbWrapper input[type=text], .gnbWrapper ins, .gnbWrapper kbd, .gnbWrapper label, .gnbWrapper legend, .gnbWrapper li, .gnbWrapper mark, .gnbWrapper menu, .gnbWrapper nav, .gnbWrapper object, .gnbWrapper ol, .gnbWrapper output, .gnbWrapper p, .gnbWrapper pre, .gnbWrapper q, .gnbWrapper ruby, .gnbWrapper s, .gnbWrapper samp, .gnbWrapper section, .gnbWrapper small, .gnbWrapper span, .gnbWrapper strike, .gnbWrapper strong, .gnbWrapper sub, .gnbWrapper summary, .gnbWrapper sup, .gnbWrapper table, .gnbWrapper tbody, .gnbWrapper td, .gnbWrapper tfoot, .gnbWrapper th, .gnbWrapper thead, .gnbWrapper time, .gnbWrapper tr, .gnbWrapper tt, .gnbWrapper u, .gnbWrapper ul, .gnbWrapper var, .gnbWrapper video {
+    box-sizing: border-box;
+    touch-action: manipulation;
+    letter-spacing: normal;
+    }
+
+	.gnbWrapper{
+		position : relative;
+		display: block!important;
+		width : 100%;
+		min-width: 1007px;
+		height : 63px;
+		background-color: #ffffff;
+		text-align: center;
+		vertical-align: top;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		border-bottom: 1px solid #dde1e5;
+    	background-color: #fff;
+    	z-index: 9999999;
+	}
+	
+	a{
+		color : black;
+		text-decoration: none;
+	}
+	
+	.title{
+		height : 63px;
+		display: inline;
+		
+	}
+	
+	.gnbBarRight{
+		position: absolute;
+    	top: 0px;
+    	right: 0px;
+    	height: 63px;
+    	padding-right: 11px;
+    	text-align: right;
+	}
+	
+	.gnbBarRight>div{
+		position: relative;
+		margin-right: 8px;
+	}
+	
+	.gnbPcbang{
+	    display: inline-block;
+		height : 62px;
+		padding : 22px 10px 0;
+		color : #17191d;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.gnbPcbangOff{
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		font-weight : bold;
+    	margin-left: 4px;
+    	color : #9fa1a7
+	}
+	
+	.gnbJoin{
+		display: inline-block;
+	}
+	
+	.gnbBarRight>div>a{
+		display : block;
+		height : 62px;
+		padding : 22px 12px 0;
+		color: #17191d;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.gnbLogin{
+		display : inline-block;
+		padding: 0px 9px 0 0;
+		box-sizing: border-box;
+	}
+	
+	.gnbLogin > h1{
+		display : block;
+		height : 38px;
+		padding :  5px 18px 9px;
+		box-sizing: border-box;
+		color : #080410;
+		text-align: center;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+    	border-radius: 19px;
+    	border: 2px solid #17191d;
+	}
+	
+	.gnbBarLeft{
+		position : absolute;
+		top : 0px;
+		left : 0px;
+		display : block;
+		width : 70px;
+		heigth : 64px;
+	}
+
+	.gnbAllmenu{
+		margin : 1px 0 0 11px;
+	}
+	
+	.gnbBarLeft > div{
+		position: relative;
+		margin-left: 4px;
+	}
+	
+	.gnbIcon{
+		padding : 22px 0px 0 5px;
+		display : inline-block;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		color : #17191d;
+	}
+	
+	.gnbIconText{
+		padding : 22px 0px 0 5px;
+		display : inline-block;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		color : #17191d;
+	}
+	
+	.contents{
+		display : block;
+		position : relative;
+		width : 954px;
+		margin : 0px auto;
+		margin-top: 75px;
+	}
+	
+	.contents > div{
+		position : absolute;
+	}
+	
+	.myInfo{
+		display : inline-block;
+		top : 0px;
+		width : 954px;
+		height : 464px;
+	}
+	
+	.title2{
+		display : block;
+		position : absolute;
+		top : 0px;
+		height : 28px;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		width : 954px;
+	}
+	
+	.titlegame{
+		display : inline-block;
+		position : absolute;
+		left : 0px;
+	}
+	
+	.bt{
+		position : absolute;
+		display : inline-block;
+		width : 200px;
+		height : 18px;
+		top : 8px;
+		right : 0px;
+		text-align : right;
+	}
+	
+	.bt h2{
+	    display : inline-block;
+	    width : 70px;
+	    text-align : right;
+		margin: 0px 0px 0px 13px;
+		font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.tooltip{
+		position : absolute;
+		top : 70px;
+		left : 0px;
+		display : inline-block;
+		width : 441px;
+		height : 342px;
+		list-style-type: none;
+	}
+	
+	.tooltip_li1{
+		position : absolute;
+		left : 0px;
+		width : 153px;
+		height : 342px;
+		background-color: #ffffff;
+	}
+	
+	.tooltip_li2{
+		position : absolute;
+		left : 160px;
+		width : 153px;
+		height : 342px;
+		background-color: #ffffff;
+	}
+	
+	.tooltip_li3{
+		position : absolute;
+		right : 8px;
+		width : 153px;
+		height : 342px;
+		background-color: #ffffff;
+	}
+	
+	.tooltip img{
+		position : absolute;
+		display : block;
+		top : 0px;
+	}
+	
+	.recommend{
+		display : block;
+		position : absolute;
+		top : 208px;
+		width : 32px;
+		height : 16px;
+		padding-top: 1px;
+		margin-left : 5px;
+		text-align: center;
+		color : #fff;
+		letter-spacing: -.25px;
+		font : 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		border-radius: 20px;
+		background-color: #00dbd3;
+	}
+	
+	.gameName{
+		display: block;
+		position : absolute;
+		bottom: 70px;
+		font : 14px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		font-weight : bold;
+		color : #17191d;
+		width : 129px;
+		height : 40px;
+		margin : 8px 0 0 12px;
+	}
+	
+	.login{
+		display: inline-block;
+		position : absolute;
+		top : 70px;
+		right : 0px;
+		width : 417px;
+		height : 342px;
+		margin-left:1px;
+		padding-left: 58px;
+		background-color: blue;
+	}
+	
+	.allGame{
+		display : inline-block;
+		position : absolute;
+		top : 464px;
+		width : 954px;
+		height : 850px;
+	}
+	
+	.allGameTitle{
+		position : absolute;
+		display : block;
+		top : 0px;
+		width : 954px;
+		height: 45px;
+	}
+	
+	.allGameTitle > h2{
+		position : absolute;
+		left : 0px;
+		display : inline-block;
+		height: 28px;
+		color: #17191d;
+		font: 24px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		font-weight: bold;
+	}
+	
+	.search{
+		position : absolute;
+		display : inline-block;
+		right : 2px;
+		width: 305px;
+		height : 44px;
+	}
+	
+	.search input{
+		position : absolute;
+		left : 0px;
+		display : inline-block;
+		width: 302px;
+		height : 44px;
+		padding : 0 3px;
+		margin-right: 0;
+		color: #222426;
+		letter-spacing: -.3px;
+		border : 0;
+		border-bottom: 1px solid #dde1e5;
+		background-color: #f8f9fa;
+	}
+	
+	.icon {
+		position : absolute;
+		right : 0px;
+		top : 12px;
+		border-bottom: 1px solid #dde1e5;
+		display : inline-block;
+		width: 20px;
+		height: 20px;
+		background : #17191d url(https://rs.nxfs.nexon.com/home/images/main/set_main.svg) no-repeat -1px -301px;
+		color : #737881;
+		border-color: #f8f9fa;
+	}
+	
+	.pcGame{
+		position : absolute;
+		top : 56px;
+		width : 954px;
+		height : 38px;
+		display : block;
+	}
+	
+	.pcGame h3{
+		display : inline-block;
+		font: 20px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		margin-left : 4px;
+		font-weight: bold;
+	}
+	
+	.pcGame a{
+		display : inline-block;
+		font: 20px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		font-weight: bold;
+		margin-left : 22px;
+		color: #c7c8cc;
+	}
+	
+	.pcGameMenu{
+		display : block;
+		position : absolute;
+		top : 100px;
+		list-style: none;
+		padding : 15px 0 0 0;
+		width : 954px;
+		height : 730px;
+	}
+	
+	.games1{
+		position: absolute;
+		left : 0px;
+		top : 0px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.games2{
+		position: absolute;
+		left : 326px;
+		top : 0px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.games3{
+		position: absolute;
+		left : 652px;
+		top : 0px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.games4{
+		position: absolute;
+		left : 0px;
+		top : 400px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.games5{
+		position: absolute;
+		left : 326px;
+		top : 400px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.games6{
+		position: absolute;
+		left : 652px;
+		top : 400px;
+		display: inline-block;
+		width : 302px;
+		height : 320px;
+		background-color: #ffffff;
+	}
+	
+	.gamesTitle{
+		position: absolute;
+		top : 220px;
+		left : 20px;
+		display: block;
+   		width: 262px;
+    	padding-right: 24px;
+    	height: 26px;
+    	font: 16px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+    	font-weight: bold;
+	}
+	
+	.gamesPeriod{
+		position: absolute;
+		top : 240px;
+		left : 20px;
+		display: block;
+   		width: 262px;
+    	padding-right: 24px;
+    	height: 26px;
+    	font: 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.mobileGames{
+		display : inline-block;
+		position : absolute;
+		top : 950px;
+		width : 954px;
+		height : 800px;
+		background-color: blue;
+	}
+	
+	.mobileGamesTitle{
+		display : inline-block;
+		position : absolute;
+		top : 0px;
+		width : 954px;
+		height : 40px;
+		background-color: red;
+	}
+	
+	.mobileGamesTitle h3{
+		display : inline-block;
+		font: 20px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		margin-left : 4px;
+		font-weight: bold;
+	}
+	
+</style>
 </head>
 <body>
-	<h1>choi ji hun</h1>
-	<h1>hunputer</h1>
-	<h3>집가고 싶다.. ㅠㅠ</h3>
+	<div class = "gnbWrapper">
+		<div class = "title">
+			<img src="https://rs.nxfs.nexon.com/gnb/images/logo_nexon.png" alt="NEXON">
+		</div>
+		<div class="gnbBarRight">
+			<div class="gnbPcbang">
+				<span>pc방</span>
+				<span class="gnbPcbangOff">OFF</span>
+			</div>
+			<div class="gnbJoin">
+				<a href="#">회원가입</a>
+			</div>
+			<div class="gnbLogin">
+				<h1>로그인</h1>
+			</div>
+		</div>
+		<div class = "gnbBarLeft">
+			<div class = "gnbAllmenu">
+				<h1 class="gnbIcon">=</h1>
+				<h1 class="gnbIconText">메뉴</h1>
+			</div>
+		</div>
+	</div>
+	<div>
+		<iframe width="100%" min-width="1007px" height="500px" src="https://www.youtube.com/embed/FJuss6pOzV0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div class="contents">
+		<div class="myInfo">
+			<div class="title2">
+				<h2 class = "title_game">추천게임</h2>
+				<div class="bt">
+						<h2>고객센터</h2>
+						<h2>보안센터</h2>
+				</div>
+			</div>
+			<ul class="tooltip">
+				<li class="tooltip_li1">
+					<img src="https://rs.nxfs.nexon.com/gameusr/20/2/56OV24145644398.jpg" width="153" height="192" alt="">
+					<span class="recommend">추천</span>
+					<span class="gameName">천애명월도</span>
+				</li>
+				<li class="tooltip_li2">
+					<img src="https://rs.nxfs.nexon.com/gameusr/20/6/XApO25163250529.png" width="153" height="192" alt="">
+					<span class="recommend">추천</span>
+					<span class="gameName">EA SPORTS FIFA ONLINE 4</span>
+				</li>
+				<li class="tooltip_li3">
+					<img src="https://rs.nxfs.nexon.com/gameusr/19/7/u72I29180233486.png" width="153" height="192" alt="">
+					<span class="recommend">추천</span>
+					<span class="gameName">서든어택</span>
+				</li>
+			</ul>
+			<div class="login">
+				<!-- 나중에 -->
+			</div>
+		</div>
+		<div class="allGame">
+			<div class="allGameTitle">
+				<h2>인기게임</h2>
+				<div class="search">
+					<input type="text" placeholder="게임명 검색">
+					<span class="icon"></span>
+				</div>
+				<div class="pcGame">
+					<h3>PC게임</h3>
+					<a href="#">모바일 게임</a>
+				</div>
+				<div class="pcGameMenu">
+					<ul class="games">
+						<li class="games1">
+							<img src="https://rs.nxfs.nexon.com/gameusr/19/12/vsoy11174835262.png" data-img="https://rs.nxfs.nexon.com/gameusr/19/12/vsoy11174835262.png" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">V4</span>
+							<span class="gamesPeriod">대장, PC에서 기다릴게요!</span>
+						</li>
+						<li class="games2">
+							<img src="https://rs.nxfs.nexon.com/gameusr/19/7/86MF29180015906.png" data-img="https://rs.nxfs.nexon.com/gameusr/19/7/86MF29180015906.png" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">메이플스토리</span>
+							<span class="gamesPeriod">모험과 재미가 가득한 2D 횡스크롤 MMORPG</span>
+						</li>
+						<li class="games3">
+							<img src="https://rs.nxfs.nexon.com/gameusr/20/6/J0YM25163250326.png" data-img="https://rs.nxfs.nexon.com/gameusr/20/6/J0YM25163250326.png" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">EA SPORTS FIFA ONLINE4</span>
+							<span class="gamesPeriod">축구, 그 이상을 경험할 수 있는 최고의 방법</span>
+						</li>
+						<li class="games4">
+							<img src="https://rs.nxfs.nexon.com/bannerusr/20/9/9mqD15143101252.png" data-img="https://rs.nxfs.nexon.com/bannerusr/20/9/9mqD15143101252.png" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">던전앤파이터</span>
+							<span class="gamesPeriod">여프리스트 진각성 업테이트</span>
+						</li>
+						<li class="games5">
+							<img src="https://rs.nxfs.nexon.com/bannerusr/20/9/uYED15142825863.jpg" data-img="https://rs.nxfs.nexon.com/bannerusr/20/9/uYED15142825863.jpg" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">서든어택</span>
+							<span class="gamesPeriod">랭크전 특별시즌 팀데스매치</span>
+						</li>
+						<li class="games6">
+							<img src="https://rs.nxfs.nexon.com/gameusr/19/7/QYiB29175929811.png" data-img="https://rs.nxfs.nexon.com/gameusr/19/7/QYiB29175929811.png" data-gif="" width="302" height="200" alt="">
+							<span class="gamesTitle">마비노기</span>
+							<span class="gamesPeriod">낭만이 넘치는 판타지라이프 세계로 출발!</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mobileGames">
+				<div class="mobileGamesTitle">
+					<h3>모바일게임</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
