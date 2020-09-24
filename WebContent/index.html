@@ -664,10 +664,147 @@
 		top : 2000px;
 		display: block;
 		width : 100%;
+		min-width: 1007px;
 		height : 267px;
-		background-color: black;
+		background-color: rgb(34, 36, 38);
 	}
 	
+	.notice{
+		position : absolute;
+		top : 0px;
+		padding : 28px 0 0 40px; 
+		display : block;
+		box-sizing: border-box;
+		border-bottom-color: rgba(248,249,250,.7);
+		border-bottom: 1px solid hsla(0,0%,100%,.1);
+		height: 73px;
+		width : 100%;
+		min-width: 1007px;
+	}
+	
+	.noticeContent{
+		display : inline-block;
+		font: 14px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+		color: #fff;
+    	font-weight: 700;
+	}
+	
+	.sns{
+		display : inline-block;
+		position: absolute;
+		right: 0px;
+		top : 28px;
+		width : 66px;
+		height : 20px;
+	}
+	
+	.snsImage1{
+		display : inline-block;
+		position: absolute;
+		left : 0px;
+		background-color: #ffffff;
+		width : 19px;
+		height : 19px;
+		background: url(https://rs.nxfs.nexon.com/home/images/main/set_footer.png) no-repeat 0 0;
+		background-position: 0 -50px;
+		
+	}
+	
+	.snsImage2{
+		display : inline-block;
+		position: absolute;
+		left : 23px;
+		background-color: #ffffff;
+		width : 19px;
+		height : 19px;
+		background: url(https://rs.nxfs.nexon.com/home/images/main/set_footer.png) no-repeat 0 0;
+		background-position: 0 -100px;
+	}
+	
+	.snsImage3{
+		display : inline-block;
+		position: absolute;
+		left : 47px;
+		background-color: #ffffff;
+		width : 19px;
+		height : 19px;
+		background: url(https://rs.nxfs.nexon.com/home/images/main/set_footer.png) no-repeat 0 0;
+		background-position: 0 -150px;
+	}
+	
+	.nav{
+		position : absolute;
+		top : 100px;
+		display : block;
+		list-style :none;
+		padding: 13px 96px 0 40px;
+		text-align: left;
+		width : 100%;
+		height : 30.2px;
+		min-width: 1007px;
+		box-sizing: border-box;
+	}
+	
+	.nav li{
+		display : inline-block;
+	}
+	
+	.nav span{
+		position : relative;
+		display : inline-block;
+		color: rgba(248,249,250,.7);
+    	letter-spacing: -.3px;
+    	font: 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.line {
+		position : relative;
+    	content: "";
+    	display: inline-block;
+    	width: 1px;
+    	height: 12px;
+    	margin: 2px 12px 0;
+    	border-left-width : 1px;
+    	border-left-style : solid;
+    	border-left-color : rgba(248,249,250,.7);
+    	font: 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+     }
+     
+     .nav2{
+		position : absolute;
+		top : 135px;
+		display : block;
+		list-style :none;
+		padding: 13px 96px 0 40px;
+		text-align: left;
+		width : 100%;
+		height : 30.2px;
+		min-width: 1007px;
+		box-sizing: border-box;
+	}
+	
+	.nav2 li{
+		display : inline-block;
+	}
+	
+	.nav2 span{
+		position : relative;
+		display : inline-block;
+		color: rgba(248,249,250,.7);
+    	letter-spacing: -.3px;
+    	font: 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.logo_final{
+		position: absolute;
+		left : 40px;
+		bottom: 50px;
+		display: inline-block;
+		width : 68px;
+		height : 23px;
+		background: url(https://rs.nxfs.nexon.com/home/images/main/set_footer.png) no-repeat 0 0;
+		color: #737881;
+	}
 	
 </style>
 </head>
@@ -860,7 +997,72 @@
 		</div>
 	</div>
 	<div class="footer">
-		
+		<p class="notice">
+			<a class="noticeContent" href="#">[공지] 9/24(목) 넥슨 정기점검 안내</a>
+			<ul class="sns">
+				<li>
+					<a href="#" class="snsImage1"></a>
+					<a href="#" class="snsImage2"></a>
+					<a href="#" class="snsImage3"></a>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li>
+					<span>이용약관</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>개인정보처리방침</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>청소년보호정책</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>개임IP사용가이드</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>게임시간선택제</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>고객센터</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>전체서비스</span>
+					<span class="line"></span>
+				</li>
+			</ul>
+			<ul class="nav2">
+				<li>
+					<span>회사소개</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>채용안내</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>윤리경영</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>LEVEL UP(넥슨폰트)</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>광고문의</span>
+					<span class="line"></span>
+				</li>
+				<li>
+					<span>넥슨PC방</span>
+					<span class="line"></span>
+				</li>
+			</ul>
+			<span class="logo_final"></span>
 	</div>
 </body>
 </html>
