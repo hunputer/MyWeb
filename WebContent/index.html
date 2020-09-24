@@ -260,14 +260,82 @@
 	.login{
 		display: inline-block;
 		position : absolute;
+		border: 4px solid #ffffff;
 		top : 70px;
 		right : 0px;
 		width : 417px;
-		height : 342px;
+		height : 334px;
 		margin-left:1px;
 		padding-left: 58px;
-		background-color: blue;
+		background-color: #f8f9fa;
 	}
+	
+	.saveid{
+		display : block;
+		position: absolute;
+		top : 200px;
+		left : 40px; 
+		color: #666;
+		font : 12px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.login_id{
+		display: inline-block;
+		position: absolute;
+		top : 70px;
+		left : 40px;
+   		width: 390px;
+    	height: 55px;
+    	padding: 6px 0 0 7px;
+    	background: url(https://ssl.nx.com/S2/p3/login/2016/set_page.gif) no-repeat 0 0;
+    	background-size: 390px;
+	}
+	
+	.login_pw{
+		display: inline-block;
+		position: absolute;
+		top : 130px;
+		left : 40px;
+   		width: 390px;
+    	height: 55px;
+    	padding: 6px 0 0 7px;
+    	background: url(https://ssl.nx.com/S2/p3/login/2016/set_page.gif) no-repeat 0 0;
+    	background-size: 390px;
+	}
+	
+	.login_title{
+		position: absolute;
+		top : 20px;
+		left : 40px;
+		width: 50px;
+    	height: 55px;
+    	color: #666;
+    	font-weight: bold;
+    	font : 14px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.button01{
+		position: absolute;
+		top : 240px;
+		left : 40px;
+		border: 1px solid #4160b8;
+    	background-color: #486bcd;
+    	width: 399px;
+   		height: 58px;
+    	color: #fff;
+    	text-align: 0 auto;
+    	font : 18px "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.input01{
+		width : 360px;
+		font-size: 16px;
+		font-weight: 700px;
+		border:0px;
+		padding: 12px 0 9px 10px;
+		outline: 0;
+	}
+	
 	
 	.allGame{
 		display : inline-block;
@@ -862,7 +930,26 @@
 				</li>
 			</ul>
 			<div class="login">
-				<!-- 나중에 -->
+				
+				<h2 class="login_title">
+					<img src="https://ssl.nx.com/S2/p3/login/2016/tit_login.png" width="69" height="24" alt="로그인">
+				</h2>
+				
+				<div class="login_id">
+					<input type="text" class="input01" placeholder="넥슨ID(아이디&nbsp;또는&nbsp;이메일)를&nbsp;입력해주세요.">
+				</div>
+				
+				<div class="login_pw">
+					<input type="password" class="input01" placeholder="비밀번호를 입력해주세요.">
+				</div>
+				
+				<div class="saveid">
+					<input type="checkbox">
+					<label for="chkSaveID">넥슨ID 저장</label>
+				</div>
+				<button class="button01">
+					<span>넥슨ID 로그인</span>
+				</button>
 			</div>
 		</div>
 		<div class="allGame">
